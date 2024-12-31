@@ -11,7 +11,7 @@
         <h1
           class="text-2xl font-bold mb-4 josefin-font flex items-center gap-1"
         >
-          <i class="fa-solid fa-coins"></i> Pay Crest
+          <img src="../src/assets/images/lgd.png" alt="" class="h-8" />
         </h1>
         <ul>
           <li class="hover:bg-white hover:text-gray-800 px-3 rounded-xl">
@@ -45,10 +45,13 @@
             >
           </li>
           <li class="bottom-4 absolute hidden md:block">
-            <router-link to="/login" class="block py-2 flex gap-2 items-center"
-              ><i class="fa-solid fa-arrow-right-from-bracket"></i>
-              <p class="hover:text-red-300">Log out</p></router-link
+            <button
+              @click="logout"
+              class="block py-2 flex gap-2 items-center hover:bg-white hover:text-red-500 px-5 rounded-full"
             >
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <p>Log out</p>
+            </button>
           </li>
         </ul>
       </aside>
@@ -111,6 +114,11 @@ export default {
   methods: {
     updateMobileStatus() {
       this.$forceUpdate();
+    },
+    logout() {
+      localStorage.removeItem("authToken");
+
+      this.$router.push("/login");
     },
   },
 };

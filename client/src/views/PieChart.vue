@@ -1,4 +1,3 @@
-<!-- PieChart.vue -->
 <template>
   <div>
     <PieChart :data="chartData" :options="chartOptions" />
@@ -64,6 +63,4 @@ export default {
 };
 </script>
 
-<style scoped>
-/* You can add some styles for the chart here if needed */
-</style>
+<style scoped></style>

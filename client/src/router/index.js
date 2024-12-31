@@ -7,7 +7,7 @@ import Login from "../components/Login.vue";
 import Signup from "../components/Signup.vue";
 
 const routes = [
-  { path: "/", redirect: "/dashboard" },
+  { path: "/", redirect: "/login" },
   { path: "/login", component: Login, name: "Login" },
   { path: "/signup", component: Signup, name: "Signup" },
   { path: "/dashboard", component: Dashboard, name: "Dashboard" },
@@ -24,5 +24,12 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = localStorage.getItem("authToken");
+  if (!isAuthenticated && to.path !== "/login" && to.path !== "/signup") {
+    next("/login");
+  } else {
+    next();
+  }
+});
 export default router;
