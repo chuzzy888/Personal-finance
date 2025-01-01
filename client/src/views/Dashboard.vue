@@ -300,7 +300,7 @@ export default {
 </style> -->
 
 <template>
-  <div class="p-6 min-h-screen josefin-font">
+  <div class="md:p-6 min-h-screen josefin-font">
     <div class="flex justify-between">
       <h2 class="text-3xl font-bold mb-4">Dashboard</h2>
 
@@ -341,11 +341,11 @@ export default {
         <h3 class="font-semibold text-2xl text-gray-800 mb-4">
           Top Spending Categories
         </h3>
-        <PieChart :data="categoryData" class="w-full h-96"></PieChart>
+        <PieChart :data="categoryData" class="w-full md:h-96"></PieChart>
       </div>
 
       <div
-        class="bg-gray-800 p-6 shadow-xl transition-shadow duration-300 rounded-lg"
+        class="bg-gray-800 p-6 shadow-xl transition-shadow duration-300 rounded-lg hidden md:block"
       >
         <h3 class="font-semibold text-2xl text-white mb-4">
           Recent Transactions
@@ -392,6 +392,7 @@ export default {
   components: {
     PieChart,
   },
+
   data() {
     return {
       userFullName: "ola@gmail.com", // Simulated user email

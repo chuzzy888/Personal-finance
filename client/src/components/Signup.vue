@@ -79,7 +79,7 @@
     <!-- Error Modal -->
     <div
       v-if="errorMessage"
-      class="modal fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center"
+      class="modal fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center px-10"
     >
       <div class="modal-content bg-white p-6 rounded-lg shadow-lg">
         <h3 class="text-red-500 text-xl font-semibold mb-4">Error</h3>
@@ -96,7 +96,7 @@
     <!-- Success Modal -->
     <div
       v-if="successMessage"
-      class="modal fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center"
+      class="modal fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center px-10"
     >
       <div class="modal-content bg-white p-6 rounded-lg shadow-lg">
         <h3 class="text-green-500 text-xl font-semibold mb-4">Success</h3>

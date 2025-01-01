@@ -13,8 +13,11 @@
         >
           <img src="../src/assets/images/lgd.png" alt="" class="h-8" />
         </h1>
-        <ul>
-          <li class="hover:bg-white hover:text-gray-800 px-3 rounded-xl">
+        <ul class="flex flex-col gap-4 md:flex-none">
+          <li
+            class="hover:bg-white hover:text-gray-800 px-3 rounded-xl"
+            @click="isSidebarOpen = !isSidebarOpen"
+          >
             <router-link
               to="/dashboard"
               class="block py-2 flex gap-2 items-center"
@@ -22,7 +25,10 @@
               Dashboard</router-link
             >
           </li>
-          <li class="hover:bg-white hover:text-gray-800 px-3 rounded-xl">
+          <li
+            class="hover:bg-white hover:text-gray-800 px-3 rounded-xl"
+            @click="isSidebarOpen = !isSidebarOpen"
+          >
             <router-link
               to="/transactions"
               class="block py-2 flex gap-2 items-center"
@@ -30,13 +36,19 @@
               Transactions</router-link
             >
           </li>
-          <li class="hover:bg-white hover:text-gray-800 px-3 rounded-xl">
+          <li
+            class="hover:bg-white hover:text-gray-800 px-3 rounded-xl"
+            @click="isSidebarOpen = !isSidebarOpen"
+          >
             <router-link to="/budget" class="block py-2 flex gap-2 items-center"
               ><i class="fas fa-calculator text-green-500"></i>
               Budget</router-link
             >
           </li>
-          <li class="hover:bg-white hover:text-gray-800 px-3 rounded-xl">
+          <li
+            class="hover:bg-white hover:text-gray-800 px-3 rounded-xl"
+            @click="isSidebarOpen = !isSidebarOpen"
+          >
             <router-link
               to="/dashboard"
               class="block py-2 flex gap-2 items-center"
@@ -44,7 +56,7 @@
               Insights</router-link
             >
           </li>
-          <li class="bottom-4 absolute hidden md:block">
+          <li class="md:bottom-4 bottom-20 absolute">
             <button
               @click="logout"
               class="block py-2 flex gap-2 items-center hover:bg-white hover:text-red-500 px-5 rounded-full"
@@ -65,7 +77,7 @@
       <main class="flex-1 p-6">
         <button
           @click="isSidebarOpen = !isSidebarOpen"
-          class="md:hidden fixed top-4 right-4 z-50 text-gray-800 rounded text-3xl"
+          class="md:hidden fixed top-3 right-4 z-50 text-gray-800 rounded-full text-2xl bg-gray-100 h-8 w-8 p-6 flex items-center justify-center"
         >
           <i
             :class="isSidebarOpen ? 'fa-solid fa-times' : 'fa-solid fa-bars'"

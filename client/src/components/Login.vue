@@ -18,8 +18,8 @@
         <p class="text-gray-500 text-center mb-6">
           Don't have an account yet?
           <router-link to="/signup" class="text-blue-600 hover:underline"
-            >Sign up now</router-link
-          >
+            >Sign up
+          </router-link>
         </p>
 
         <form @submit.prevent="login">
@@ -77,7 +77,7 @@
 
     <div
       v-if="isModalOpen"
-      class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50"
+      class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50 px-10"
     >
       <div class="bg-white rounded-lg p-6 w-96 text-red-600">
         <div class="text-center">
